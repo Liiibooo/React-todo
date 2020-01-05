@@ -92,11 +92,13 @@ function TodoList() {
   }, []);
 
   const removeTodo = useCallback((id) => {
-    setTodoList((todoList) => {
+    // return console.log(1);
+
+    setTodoList((todoList) =>
       todoList.filter(todo => {
         return todo.id !== id;
       })
-    })
+    )
   }, []);
 
   const toggleTodo = useCallback((id) => {
